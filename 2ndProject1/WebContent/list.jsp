@@ -1,3 +1,5 @@
+<%@page import="com.model.MessageDTO"%>
+<%@page import="com.model.MessageDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -38,6 +40,9 @@
 <link href="js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
+	<%
+		
+	%>
   <!--header section start -->
     <div class="header_section header_bg">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -77,6 +82,7 @@
             <div class="table-responsive">
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
+                
                   <tr>
                     <th scope="col">번호</th>
                     <th scope="col">제목</th>

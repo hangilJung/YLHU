@@ -1,40 +1,28 @@
 @charset "EUC-KR";
 
-#container {
-	width: 70%;
-    margin: 0 auto;     /* 가로로 중앙에 배치 */
-    padding-top: 10%;   /* 테두리와 내용 사이의 패딩 여백 */
-    }
-    
-#list {
+#con-al{ 
+    margin:0 auto;
+}
+
+#con_send_submit{
+	width: 90%;
+    float: left;
+    font-size: 20px;
+    color: #ffffff;
     text-align: center;
-    }
-   
-#write {
-    text-align: right;
-    }
-     
-    /* Bootstrap 수정 */
-.table > thead {
-      background-color: #b3c6ff;
-    }
-.table > thead > tr > th {
-      text-align: center;
-    }
-.table-hover > tbody > tr:hover {
-      background-color: #e6ecff;
-    }
-.table > tbody > tr > td {
-      text-align: center;
-    }
-.table > tbody > tr > #title {
-      text-align: left;
-    }
-     
-div > #paging {
-      text-align: center;
-    }
+    background-color: #ff5a58;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    box-sizing: border-box !important;
+    width: 170px;
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 40px;	
+}
 
-
-
-
+#con_box{	
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}

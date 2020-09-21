@@ -29,6 +29,8 @@
 <link rel="stylesheet" href="css/owl.carousel.min.css">
 <link rel="stylesheet" href="css/owl.theme.default.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<!-- hg -->
+<link rel="stylesheet" href = "css/hg.css">
 </head>
 <body>
   <!--header section start -->
@@ -63,24 +65,21 @@
     <!-- contact section start -->
     <div class="contact_section layout_padding">
       <div class="container-fluid">
-        <h1 class="what_taital">Contact us</h1>
-        <p class="amet_text">amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+        <h1 class="what_taital">문의하기</h1>
+        <p class="amet_text">저희에게 문의하실 사항을 보내주세요</p>
         <div class="contact_section2">
-          <div class="row">
-            <div class="col-md-6 padding_left_0">
+          <div id="con_box">
+          <form action="SendMessageService.do" method="post">
+            <div id="con-al" class="col-md-6 padding_left_0">
               <div class="mail_section">
-                <input type="" class="mail_text_1" placeholder="Name" name="Name">
-                <input type="" class="mail_text_1" placeholder="Phone Number" name="Phone Number">
-                <input type="" class="mail_text_1" placeholder="Email" name="Email">
-                <textarea class="massage_text" placeholder="Message" rows="5" id="comment" name="Message"></textarea>
-                <div class="send_bt"><a href="#">send</a></div>
+                <input type="text" class="mail_text_1" placeholder="Name" name="sender">
+                <input type="text" class="mail_text_1" placeholder="Email" name="msg_email">
+                <input type="text" class="mail_text_1" placeholder="Title" name="title">
+                <textarea class="massage_text" placeholder="Message" rows="5" id="comment" name="content"></textarea>
+                <div><input type="submit" id="con_send_submit" value="send"></div>
               </div>
             </div>
-            <div class="col-md-6 padding_0">
-              <div class="map-responsive">
-                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

@@ -11,10 +11,10 @@ import com.model.MemberDTO;
 public class Login_Service implements Command{
 	
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		String id = request.getParameter("id");
+		String email = request.getParameter("email");
 		String pw = request.getParameter("pw");
 		
-		MemberDTO dto = new MemberDTO(id, pw);
+		MemberDTO dto = new MemberDTO(email, pw);
 		MemberDAO dao = new MemberDAO();
 		MemberDTO info = dao.login(dto);
 		

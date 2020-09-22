@@ -19,12 +19,12 @@ public class Update_Service implements Command {
 		HttpSession session = request.getSession();
 		MemberDTO info = (MemberDTO)session.getAttribute("info");
 		
-		String id = info.getId();
+		String email = info.getEmail();
 		String pw = request.getParameter("pw");
 		int age = Integer.parseInt(request.getParameter("age"));
 		String tel = request.getParameter("tel");
 		
-		MemberDTO dto = new MemberDTO(id, pw, age, tel);
+		MemberDTO dto = new MemberDTO(email, pw, age, tel);
 		MemberDAO dao = new MemberDAO();
 		int cnt = dao.update(dto);
 		

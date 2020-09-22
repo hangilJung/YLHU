@@ -1,5 +1,5 @@
 1. 회원가입한 정보를 저장할 수 있는 'news_member'테이블을 만드시오.
-   컬럼명 : id / pw / age / tel
+   컬럼명 : email / pw / age / tel
 
 drop table news_member;
 

@@ -11,13 +11,13 @@ public class Join_Service implements Command {
 
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 			
-			String id = request.getParameter("id");
+			String id = request.getParameter("email");
 			String pw = request.getParameter("pw");
 			int age = Integer.parseInt(request.getParameter("age"));
 			String tel = request.getParameter("tel");
 			
 			
-			MemberDTO dto = new MemberDTO(id,pw,age,tel);
+			MemberDTO dto = new MemberDTO(emil,pw,age,tel);
 			MemberDAO dao = new MemberDAO();
 			int cnt = dao.join(dto); 
 			

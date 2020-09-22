@@ -1,5 +1,4 @@
 <%@page import="com.model.MemberDTO"%>
-<%@page import="java.util.ArrayList"%>
 <%@page import="com.model.MessageDTO"%>
 <%@page import="com.model.MessageDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -77,38 +76,31 @@
     </div>
     <!--header section end -->
     <!--viewBoard section start  -->
-              <table class="table align-items-center table-flush table-hover de-table">
-                <thead class="thead-light" >                
-                  <tr>
-                    <th class="de-th" scope="col">제목</th>
-                    <th class="de-th" scope="col">내용</th>   
-                    <th class="de-th" scope="col"></th>
-                    <th class="de-th" scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody class="de-tbody">
-                	
-                	
-                  <tr>                    
-                    <td class="de-td">
-                     
-                    </td>
-                    <td class="de-td">
-                      
-                    </td>                    
-                    <td class="de-td">
-                     
-                    </td>
-                    <td class="de-td">
-                      
-                    </td>
-                    
-                  </tr>  
-                  
-                                                   
-                </tbody>
-              </table>
-            </div>
+              <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <h2 class="text-center">게시글 쓰기</h2>
+        <form action="#" method="post" \>
+          <table class="table table-hover">
+                <td>제목</td>
+                <td><input type="text"  class="form-control" name="title"></td>
+            </tr>
+            <tr>
+                <td>작성자</td>
+                <td><input type="text"  class="form-control" name="writer"></td>
+            </tr>
+                <td>글내용</td>
+                <td><textarea rows="10" cols="50" name="content" class="form-control"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"  class="text-center">
+                <input class ="my-btn" type = "submit" value = "글쓰기">
+                <button class="my-btn" type="button" onclick="location.href ='reviewBoard.jsp'">취소</button>
+            </tr>
+          </table>
+        </form>
+    </div>
+</div>
     <!--viewBoard section end -->
     <!--footer section start -->
     <div class="footer_section layout_padding margin_top_90">

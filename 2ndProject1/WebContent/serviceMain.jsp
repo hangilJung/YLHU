@@ -1,4 +1,4 @@
-<%@page import="java.util.ArrayList"%>
+
 <%@page import="com.model.MessageDTO"%>
 <%@page import="com.model.MessageDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"

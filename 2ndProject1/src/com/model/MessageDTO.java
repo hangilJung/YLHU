@@ -25,6 +25,15 @@ public class MessageDTO {
 		this.content = content;
 	}
 
+	
+
+	public MessageDTO(int msg_num, String title, String content) {
+		super();
+		this.msg_num = msg_num;
+		this.title = title;
+		this.content = content;
+	}
+
 
 	public int getMsg_num() {
 		return msg_num;

@@ -56,10 +56,10 @@
                 <a class="nav-link" href="services.jsp">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.jsp">Contact Us</a>
+                <a class="nav-link" href="Board.jsp">Board</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Board.jsp">Board</a>
+                <a class="nav-link" href="contact.jsp">Contact Us</a>
               </li>
               <%if(info!=null) {%>
               <li class="nav-item">

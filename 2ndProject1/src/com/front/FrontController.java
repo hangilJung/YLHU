@@ -16,6 +16,7 @@ import com.controller.SendMessageService;
 import com.controller.detailView;
 import com.controller.myMessage;
 import com.controller.removeBoard;
+import com.controller.updateBoard;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet{
@@ -32,6 +33,7 @@ public class FrontController extends HttpServlet{
 		map.put("detailView.do", new detailView());
 		map.put("Login_Service.do", new Login_Service());
 		map.put("Logout_Service.do", new Logout_Service());
+		map.put("updateBoard.do", new updateBoard());
 		}
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response)

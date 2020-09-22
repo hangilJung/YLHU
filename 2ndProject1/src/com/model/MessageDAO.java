@@ -56,6 +56,8 @@ public class MessageDAO {
 			e2.printStackTrace();
 		}
 	}
+	
+	
 	public int sendMessage(MessageDTO dto) {
 
 		getConn();
@@ -216,7 +218,7 @@ public class MessageDAO {
 			pst.setInt(1, num);
 			rs= pst.executeQuery();
 			
-			if(rs.next()) {
+			while(rs.next()) {
 				int msg_num = rs.getInt(1);
 				String sender = rs.getString(2);
 				String msg_mail = rs.getString(3);
@@ -237,4 +239,31 @@ public class MessageDAO {
 		
 	}
 
+	public int updateBoard(int msg_num, String title, String content) {
+				
+		getConn();
+
+		try {
+
+			String sql = "update news_message set title = ?, content = ?, msg_day= (select sysdate from dual) where msg_num = ?";
+			pst = conn.prepareStatement(sql);
+					
+			pst.setInt(3, msg_num);
+			pst.setString(1, title);
+			pst.setString(2, content);
+		
+			cnt = pst.executeUpdate();		
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+
+		}
+		return cnt;
+		
+	}
+
+	
+	
 }

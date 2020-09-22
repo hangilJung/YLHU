@@ -44,9 +44,9 @@
 <body>
 		<%	
 			MemberDTO info = (MemberDTO)session.getAttribute("info");
-			int msg_num = Integer.parseInt(request.getParameter("msg_num"));
-			MessageDAO dao = new MessageDAO();
-			MessageDTO dto = dao.detailView(msg_num);
+			String title = request.getParameter("title");
+			String content = request.getParameter("content");
+			String msg_num = request.getParameter("msg_num");
 		%>	
 	<!--header section start -->
     <div class="header_section header_bg">
@@ -78,24 +78,28 @@
     </div>
     <!--header section end -->
     <!--viewBoard section start  -->
+    	  <form action="updateBoard.do" method="post">
     		<div style="margin: 0px 250px 0px 250px;">
              <table class="table table-hover">
               <tr>  
                 <td>제목</td>
-                <td><textarea type="text"  class="form-control" name="title" readonly><%=dto.getTitle() %></textarea></td>
+                <td><textarea type="text"  class="form-control" name="title"><%=title%></textarea></td>
           	  </tr>
+          	  	<td>시스템 번호</td>
+          	  	<td><textarea type="text" name="msg_num" class="form-control" readonly><%=msg_num %></textarea></td>
           	  <tr>
                 <td>글내용</td>
-                <td><textarea rows="10" cols="50" name="content" class="view" readonly><%=dto.getContent() %></textarea></td>
+                <td><textarea rows="10" cols="50" name="content" class="view"><%=content%></textarea></td>          	  	
           	  </tr>
-          	  <tr>
+              <tr>  
                 <td colspan="2"  class="text-center">
-                <a href="updateBoard.jsp?msg_num=<%=msg_num%>&title=<%=dto.getTitle()%>&content=<%=dto.getContent()%>"><button class="my-btn">수정하러가기</button></a>
-                <button class="my-btn" type="button" onclick="location.href ='list.jsp'">뒤로가기</button>
+                <input type="submit" class="my-btn" value="수정완료"></input>
+                <a href="viewBoard.jsp?title=<%=title%>&content=<%=content%>&msg_num=<%=msg_num%>"><button class="my-btn" type="button">뒤로가기</button></a>
                 </td>
            	  </tr>
          	 </table>
             </div>
+           </form>
     <!--viewBoard section end -->
     <!--footer section start -->
     <div class="footer_section layout_padding margin_top_90">

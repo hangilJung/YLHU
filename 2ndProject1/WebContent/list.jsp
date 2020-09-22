@@ -1,5 +1,5 @@
-<%@page import="com.model.MemberDTO"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import="com.model.MemberDTO"%>
 <%@page import="com.model.MessageDTO"%>
 <%@page import="com.model.MessageDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -43,37 +43,38 @@
 </head>
 <body>
 	<%
+		MemberDTO info = (MemberDTO)session.getAttribute("info");
 		MessageDAO dao = new MessageDAO();
-		//MemberDTO info = (MemberDTO)session.getAttribute("info"); //로그인시 받아오는 info
-		//MemberDTO info = new MemberDTO("admin", "123", 20, "010-1234-1234"); //관리자
-		MemberDTO info = new MemberDTO("123", "123", 20, "010-1234-1234"); // 이용자
 		ArrayList<MessageDTO> list1 = dao.viewAll();
 		ArrayList<MessageDTO> list2 = dao.myView(info.getEmail());
 	%>
   <!--header section start -->
     <div class="header_section header_bg">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+          <div class="logo"><a href="main.jsp"><img src="images/logo.png"></a></div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
+              <ul class="navbar-nav mr-auto">
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
+                <a class="nav-link" href="services.jsp">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="team.html">Team</a>
+                <a class="nav-link" href="Board.jsp">Board</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.jsp">Contact Us</a>
               </li>
+              <c:if test="${empty info}">
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Page</a>
+              </li>
+              </c:if>
             </ul>
           </div>
         </nav>
@@ -101,8 +102,7 @@
                 <tbody>
                 <div class="detail-view"></div>
                 	<%if(info.getEmail().equals("admin")){
-                		for(int i = 0; i<list1.size();i++){ %>
-                	
+                		for(int i = 0; i<list1.size();i++){ %>                	
                   <tr>                    
                     <td>
                       <%=i+1 %>
@@ -116,13 +116,22 @@
                     <td>
                       <%=list1.get(i).getMsg_Day() %>
                     </td>
-                    <td><a href="viewBoard.do?msg_num=<%=list1.get(i).getMsg_num()%>"><button class="table-update btn-primary">상세보기</button></td></a>
-                    <td><a href="removeBoard.do?msg_num=<%=list1.get(i).getMsg_num()%>"><button class="table-update btn-primary">삭제</button></a></td>
-                  </tr>  
-                  <% }}else {
-                  		for(int i = 0; i<list2.size();i++){%>
-               
-                  		<tr>                    
+                    <td><a href="viewBoard.jsp?msg_num=<%=list1.get(i).getMsg_num()%>"><button class="table-update btn-primary">상세보기</button></td></a>
+                    <td><button onclick="btn1_event()" class="table-update btn-primary">삭제</button></td>
+                  </tr> 
+                  <script type="text/javascript">
+						function btn1_event(){
+							if(confirm("정말 삭제하시겠습니까?")==true){
+								document.location.href="removeBoard.do?msg_num=<%=list1.get(i).getMsg_num()%>";
+							}else{
+								return;
+							}
+								}
+					</script>
+                  <% }}else {%>
+               		
+                  	<% for(int i = 0; i<list2.size();i++){%>
+                  <tr>                    
                     <td>
                       <%=i+1 %>
                     </td>
@@ -134,13 +143,23 @@
                     </td>
                     <td>
                       <%=list2.get(i).getMsg_Day() %>
-                    </td>
-                    <td><a href="detailView.do?msg_num=<%=list2.get(i).getMsg_num()%>"><button class="table-update btn-primary">상세보기</button></td></a>
-                    <td><a href="removeBoard.do?msg_num=<%=list2.get(i).getMsg_num()%>"><button class="table-update btn-primary">삭제</button></a></td>
+                    </td >
+                     <td><a href="viewBoard.jsp?msg_num=<%=list2.get(i).getMsg_num()%>" name="viewBoard_confirm"><button class="table-update btn-primary">상세보기</button></td></a>
+                    <td><button onclick="btn2_event()" class="table-update btn-primary">삭제</button></td>
                   </tr>
+                    <script type="text/javascript">
+						function btn2_event(){
+							if(confirm("정말 삭제하시겠습니까?")==true){
+								document.location.href="removeBoard.do?msg_num=<%=list2.get(i).getMsg_num()%>";
+							}else{
+								return;
+							}
+								}
+					</script>
+                  
                   
                   		<%}} %>
-                                                   
+                                              
                 </tbody>
               </table>
             </div>

@@ -55,7 +55,7 @@ public class MemberDAO {
 		}
 	}
 
-	public int Join(MemberDTO dto) {
+	public int join(MemberDTO dto) {
 		try {
 			getConn();
 

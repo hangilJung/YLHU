@@ -1,3 +1,4 @@
+<%@page import="com.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -33,28 +34,36 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 </head>
 <body>
+	<%
+		MemberDTO info = (MemberDTO)session.getAttribute("info");
+	%>
   <!--header section start -->
     <div class="header_section">
       <div class="header_left">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+          <div class="logo"><a href="main.jsp"><img src="images/logo.png"></a></div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="main.html">Home</a>
+                <a class="nav-link" href="about.jsp">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="services.jsp">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
+                <a class="nav-link" href="contact.jsp">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="Board.jsp">Board</a>
               </li>
+              <%if(info!=null) {%>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Page</a>
+              </li>
+              <%} %>
             </ul>
           </div>
         </nav>
@@ -62,8 +71,12 @@
         <h1 class="banner_taital">financial <br>Service</h1>
         <p class="banner_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
         <div class="btn_main">
+        <%
+        	if(info==null){
+        %>
           <div class="contact_bt"><a class="nav-link" data-toggle="modal" href="#LoginModal">Login Us</a></div>
           <div class="more_bt"><a class="nav-link" data-toggle="modal" href="#JoinModal">Join Us </a></div>
+          <%} %>
         </div>
       </div>
     </div>
@@ -86,7 +99,7 @@
               <form action="Login_Service.do" method="post">
               <li>
                 <label for="id">ID </label>
-                <input type="text" name="id" class="form-control2" placeholder="ID를 입력하시오" required="required"> 
+                <input type="text" name="email" class="form-control2" placeholder="ID를 입력하시오" required="required"> 
               </li> 
               
               <li>
@@ -130,7 +143,7 @@
             </li>
             <form action="Join_Service.do" method="post">
               <li>
-                <input type="text" name="id" class="form-control2" placeholder="ID">
+                <input type="text" name="email" class="form-control2" placeholder="ID">
               </li>
               <li>
                 <input type="password" name="pw" class="form-control2" placeholder="PW">

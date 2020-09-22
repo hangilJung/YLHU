@@ -1,8 +1,7 @@
 <%@page import="com.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- basic -->
@@ -13,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>Contact</title>
+<title>Services</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content=""> 
@@ -33,11 +32,9 @@
 <link rel="stylesheet" href="css/owl.carousel.min.css">
 <link rel="stylesheet" href="css/owl.theme.default.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-<!-- hg -->
-<link rel="stylesheet" href = "css/hg.css">
 </head>
 <body>
-	<%
+	<% 
 		MemberDTO info = (MemberDTO)session.getAttribute("info");
 	%>
   <!--header section start -->
@@ -49,8 +46,8 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-             <li class="nav-item">
-                <a class="nav-link" href="about.jsp">About</a>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="services.jsp">Services</a>
@@ -71,29 +68,50 @@
         </nav>
     </div>
     <!--header section end -->
-    <!-- contact section start -->
-    <div class="contact_section layout_padding">
-      <div class="container-fluid">
-        <h1 class="what_taital">문의하기</h1>
-        <p class="amet_text">저희에게 문의하실 사항을 보내주세요</p>
-        <div class="contact_section2">
-          <div id="con_box">
-          <form action="SendMessageService.do" method="post">
-            <div id="con-al" class="col-md-6 padding_left_0">
-              <div class="mail_section">
-                <input type="text" class="mail_text_1" placeholder="Name" name="sender">
-                <input type="text" class="mail_text_1" placeholder="Email" name="msg_email">
-                <input type="text" class="mail_text_1" placeholder="Title" name="title">
-                <textarea class="massage_text" placeholder="Message" rows="5" id="comment" name="content"></textarea>
-                <div><input type="submit" id="con_send_submit" value="send"></div>
-              </div>
+    <!--services section start -->
+    <div class="what_we_do_section layout_padding">
+      <div class="container">
+        <h1 class="what_taital">WHAT WE DO</h1>
+        <p class="what_text">It is a long established fact that a reader will be distracted by the readable content of a </p>
+        <div class="what_we_do_section_2">
+          <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="box_main">
+              <div class="icon_1"><img src="images/icon-1.png"></div>
+              <h3 class="accounting_text">Accounting</h3>
+              <p class="lorem_text">Lorem Ipsum is simply dummy text of the printing and</p>
+              <div class="moremore_bt_1"><a href="#">Read More </a></div>
             </div>
-            </form>
           </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="box_main active">
+              <div class="icon_1"><img src="images/icon-2.png"></div>
+              <h3 class="accounting_text">Advisor</h3>
+              <p class="lorem_text">Lorem Ipsum is simply dummy text of the printing and</p>
+              <div class="moremore_bt_1"><a href="#">Read More </a></div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="box_main">
+              <div class="icon_1"><img src="images/icon-3.png"></div>
+              <h3 class="accounting_text">Investment</h3>
+              <p class="lorem_text">Lorem Ipsum is simply dummy text of the printing and</p>
+              <div class="moremore_bt_1"><a href="#">Read More </a></div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="box_main">
+              <div class="icon_1"><img src="images/icon-4.png"></div>
+              <h3 class="accounting_text">Financial</h3>
+              <p class="lorem_text">Lorem Ipsum is simply dummy text of the printing and</p>
+              <div class="moremore_bt_1"><a href="#">Read More </a></div>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </div>
-    <!-- contact section end -->
+    <!--services section end -->
     <!--footer section start -->
     <div class="footer_section layout_padding margin_top_90">
       <div class="container">

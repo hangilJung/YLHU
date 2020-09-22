@@ -76,7 +76,7 @@
     </div>
     <!--header section end -->
     <!--viewBoard section start  -->
-              <table class="table align-items-center table-flush table-hover">
+              <table class="table align-items-center table-flush table-hover de-table">
                 <thead class="thead-light" >                
                   <tr>
                     <th class="de-th" scope="col">Á¦¸ñ</th>

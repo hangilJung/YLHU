@@ -21,7 +21,7 @@ public class Login_Service implements Command{
 		if(info!=null) {
 			System.out.println("로그인 성공");
 			HttpSession session = request.getSession();
-			session.setAttribute("info", info);
+			session.setAttribute("info", info);ㅑ
 			
 		}else {
 			System.out.println("로그인 실패");

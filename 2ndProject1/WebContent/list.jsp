@@ -1,3 +1,5 @@
+<%@page import="com.model.MemberDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.model.MessageDTO"%>
 <%@page import="com.model.MessageDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -41,7 +43,12 @@
 </head>
 <body>
 	<%
-		
+		MessageDAO dao = new MessageDAO();
+		//MemberDTO info = (MemberDTO)session.getAttribute("info"); //로그인시 받아오는 info
+		//MemberDTO info = new MemberDTO("admin", "123", 20, "010-1234-1234"); //관리자
+		MemberDTO info = new MemberDTO("123", "123", 20, "010-1234-1234"); // 이용자
+		ArrayList<MessageDTO> list1 = dao.viewAll();
+		ArrayList<MessageDTO> list2 = dao.myView(info.getEmail());
 	%>
   <!--header section start -->
     <div class="header_section header_bg">
@@ -65,7 +72,7 @@
                 <a class="nav-link" href="team.html">Team</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="contact.jsp">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -77,34 +84,63 @@
         <div class="col">
           <div class="card shadow">
             <div class="card-header border-0">
-              <h3 class="mb-0">내가 쓴 글 목록</h3>
+              <h3 class="mb-0"><%if(info.getEmail().equals("admin")){%>고객 문의사항<%}else { %>내가 쓴 글 목록<%} %></h3>
             </div>
             <div class="table-responsive">
-              <table class="table align-items-center table-flush">
-                <thead class="thead-light">
-                
+              <table class="table align-items-center table-flush table-hover">
+                <thead class="thead-light">                
                   <tr>
                     <th scope="col">번호</th>
                     <th scope="col">제목</th>
                     <th scope="col">작성자</th>
-                    <th scope="col">시간</th>
+                    <th scope="col">시간</th>    
+                    <th scope="col"></th>
+                    <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
+                <div class="detail-view"></div>
+                	<%if(info.getEmail().equals("admin")){
+                		for(int i = 0; i<list1.size();i++){ %>
+                	
                   <tr>                    
                     <td>
-                      1
+                      <%=i+1 %>
                     </td>
                     <td>
-                      	제목의 제목
+                      <%=list1.get(i).getTitle() %>
                     </td>                    
                     <td>
-                    	정한길
+                      <%=list1.get(i).getSender() %>
                     </td>
-                    <td class="text-center">
-                      20:20
+                    <td>
+                      <%=list1.get(i).getMsg_Day() %>
                     </td>
-                  </tr>                                   
+                    <td><a href="viewBoard.do?msg_num=<%=list1.get(i).getMsg_num()%>"><button class="table-update btn-primary">상세보기</button></td></a>
+                    <td><a href="removeBoard.do?msg_num=<%=list1.get(i).getMsg_num()%>"><button class="table-update btn-primary">삭제</button></a></td>
+                  </tr>  
+                  <% }}else {
+                  		for(int i = 0; i<list2.size();i++){%>
+               
+                  		<tr>                    
+                    <td>
+                      <%=i+1 %>
+                    </td>
+                    <td>
+                      <%=list2.get(i).getTitle() %>
+                    </td>                    
+                    <td>
+                      <%=list2.get(i).getSender() %>
+                    </td>
+                    <td>
+                      <%=list2.get(i).getMsg_Day() %>
+                    </td>
+                    <td><a href="detailView.do?msg_num=<%=list2.get(i).getMsg_num()%>"><button class="table-update btn-primary">상세보기</button></td></a>
+                    <td><a href="removeBoard.do?msg_num=<%=list2.get(i).getMsg_num()%>"><button class="table-update btn-primary">삭제</button></a></td>
+                  </tr>
+                  
+                  		<%}} %>
+                                                   
                 </tbody>
               </table>
             </div>
@@ -203,5 +239,6 @@
     <!-- javascript --> 
     <script src="js/owl.carousel.js"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
+	
 </body>
 </html>

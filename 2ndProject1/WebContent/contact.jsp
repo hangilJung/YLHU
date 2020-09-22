@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
@@ -66,8 +68,8 @@
     <!-- contact section start -->
     <div class="contact_section layout_padding">
       <div class="container-fluid">
-        <h1 class="what_taital">ë¬¸ì˜í•˜ê¸°</h1>
-        <p class="amet_text">ì €í¬ì—ê²Œ ë¬¸ì˜í•˜ì‹¤ ì‚¬í•­ì„ ë³´ë‚´ì£¼ì„¸ìš”</p>
+        <h1 class="what_taital">¹®ÀÇÇÏ±â</h1>
+        <p class="amet_text">ÀúÈñ¿¡°Ô ¹®ÀÇÇÏ½Ç »çÇ×À» º¸³»ÁÖ¼¼¿ä</p>
         <div class="contact_section2">
           <div id="con_box">
           <form action="SendMessageService.do" method="post">

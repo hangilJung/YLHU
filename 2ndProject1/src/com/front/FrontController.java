@@ -9,7 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.controller.LoginService;
 import com.controller.SendMessageService;
+import com.controller.detailView;
+import com.controller.myMessage;
+import com.controller.removeBoard;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet{
@@ -20,7 +24,10 @@ public class FrontController extends HttpServlet{
 		map = new HashMap<String, Command>();
 		
 		map.put("SendMessageService.do", new SendMessageService());
-		
+		map.put("LoginService.do", new LoginService());
+		map.put("removeBoard.do", new removeBoard());
+		map.put("myMessage.do", new myMessage());
+		map.put("detailView.do", new detailView());
 		}
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response)

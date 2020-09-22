@@ -114,5 +114,127 @@ public class MessageDAO {
 		}
 		return list;
 	}
+	
+	public ArrayList<MessageDTO> viewAll() {
+		ArrayList<MessageDTO> list = new ArrayList<>();
+		MessageDTO dto = null;
+		getConn();
+
+		try {
+
+			String sql = "select * from news_message order by msg_day desc";
+			pst = conn.prepareStatement(sql);
+			
+			rs= pst.executeQuery();
+			
+			while(rs.next()) {
+				int msg_num = rs.getInt(1);
+				String sender = rs.getString(2);
+				String msg_mail = rs.getString(3);
+				String title = rs.getString(4);
+				String content = rs.getString(5);
+				String msg_day = rs.getString(6);
+				
+				list.add(new MessageDTO(msg_num, sender, msg_mail,title,content,msg_day));
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+
+		}
+		return list;
+	}
+
+	public int removeBoard(int msg_num) {
+		getConn();
+
+		try {
+
+			String sql = "delete from news_message where msg_num = ?";
+			pst = conn.prepareStatement(sql);
+			pst.setInt(1,msg_num);
+			
+			cnt = pst.executeUpdate();			
+			
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+
+		}
+		return cnt;
+	}
+
+	public ArrayList<MessageDTO> myView(String msg_email) {
+		ArrayList<MessageDTO> list = new ArrayList<>();
+		MessageDTO dto = null;
+		
+		getConn();
+
+		try {
+
+			String sql = "select * from news_message where msg_mail=?";
+			pst = conn.prepareStatement(sql);
+			
+			pst.setString(1, msg_email);
+			rs= pst.executeQuery();
+			
+			while(rs.next()) {
+				int msg_num = rs.getInt(1);
+				String sender = rs.getString(2);
+				String msg_mail = rs.getString(3);
+				String title = rs.getString(4);
+				String content = rs.getString(5);
+				String msg_day = rs.getString(6);
+				
+				list.add(new MessageDTO(msg_num, sender, msg_mail,title,content,msg_day));
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+
+		}
+		return list;
+		
+	}
+
+	public MessageDTO detailView(int num) {		
+		MessageDTO dto = null;
+		
+		getConn();
+
+		try {
+
+			String sql = "select * from news_message where msg_num=?";
+			pst = conn.prepareStatement(sql);
+			
+			pst.setInt(1, num);
+			rs= pst.executeQuery();
+			
+			if(rs.next()) {
+				int msg_num = rs.getInt(1);
+				String sender = rs.getString(2);
+				String msg_mail = rs.getString(3);
+				String title = rs.getString(4);
+				String content = rs.getString(5);
+				String msg_day = rs.getString(6);
+				
+				dto = new MessageDTO(msg_num, sender, msg_mail,title,content,msg_day);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+
+		}
+		return dto;
+		
+	}
 
 }

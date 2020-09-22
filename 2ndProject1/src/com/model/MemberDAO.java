@@ -59,7 +59,7 @@ public class MemberDAO {
 		try {
 			getConn();
 
-			String sql = "insert into web_member values(?,?,?,?)";
+			String sql = "insert into news_member values(?,?,?,?)";
 			pst = conn.prepareStatement(sql);
 
 			pst.setString(1, dto.getEmail());
@@ -82,7 +82,7 @@ public class MemberDAO {
 		try {
 			getConn();
 
-			String sql = "select * from web_member where email = ? and pw = ?";
+			String sql = "select * from news_member where email = ? and pw = ?";
 			pst = conn.prepareStatement(sql);
 
 			pst.setString(1, dto.getEmail());
@@ -114,7 +114,7 @@ public class MemberDAO {
 		try {
 			getConn();
 
-			String sql = "update web_member set pw = ?, age = ?, tel = ? where email = ?";
+			String sql = "update news_member set pw = ?, age = ?, tel = ? where email = ?";
 			pst = conn.prepareStatement(sql);
 
 			pst.setString(1, dto.getPw());

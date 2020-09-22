@@ -1,16 +1,20 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.model.MessageDTO"%>
+<%@page import="com.model.MessageDAO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- basic -->
-<meta charset="utf-8">
+<meta charset="EUC-KR">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- mobile metas -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>Contact</title>
+<title>Main Service</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content=""> 
@@ -32,8 +36,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 <!-- hg -->
 <link rel="stylesheet" href = "css/hg.css">
+<!-- Icons -->
+<link href="js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+<link href="js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
+	
   <!--header section start -->
     <div class="header_section header_bg">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -56,39 +64,22 @@
                 <a class="nav-link" href="team.html">Team</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="contact.jsp">Contact Us</a>
               </li>
             </ul>
           </div>
         </nav>
     </div>
     <!--header section end -->
-    <!-- contact section start -->
-    <div class="contact_section layout_padding">
-      <div class="container-fluid">
-        <h1 class="what_taital">Î¨∏ÏùòÌïòÍ∏∞</h1>
-        <p class="amet_text">Ï†ÄÌù¨ÏóêÍ≤å Î¨∏ÏùòÌïòÏã§ ÏÇ¨Ìï≠ÏùÑ Î≥¥ÎÇ¥Ï£ºÏÑ∏Ïöî</p>
-        <div class="contact_section2">
-          <div id="con_box">
-          <form action="SendMessageService.do" method="post">
-            <div id="con-al" class="col-md-6 padding_left_0">
-              <div class="mail_section">
-                <input type="text" class="mail_text_1" placeholder="Name" name="sender">
-                <input type="text" class="mail_text_1" placeholder="Email" name="msg_email">
-                <input type="text" class="mail_text_1" placeholder="Title" name="title">
-                <textarea class="massage_text" placeholder="Message" rows="5" id="comment" name="content"></textarea>
-                <div><input type="submit" id="con_send_submit" value="send"></div>
-              </div>
-            </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- contact section end -->
+    <!--viewBoard section start  -->
+    
+	<h2 align="center">∏ﬁ¿Œ º≠∫ÒΩ∫</h2>
+	<textarea class="main-text col-sm-5 text-area" rows="5" placeholder="ø©±‚ø° ¿˚æÓ¡÷ººø‰."></textarea>
+	
+    <!--viewBoard section end -->
     <!--footer section start -->
     <div class="footer_section layout_padding margin_top_90">
-      <div class="container">
+      
         <div class="row">
           <div class="col-lg-3 col-sm-6">
             <h4 class="about_text">About Financial</h4>
@@ -134,7 +125,7 @@
           <div class="copyright_text">Copyright 2019 All Right Reserved By <a href="https://html.design">Free html  Templates</a></div>
         </div>
         <!-- copyright section end -->
-      </div>
+      
     </div>
     <!--footer section end -->
     <!-- Javascript files-->

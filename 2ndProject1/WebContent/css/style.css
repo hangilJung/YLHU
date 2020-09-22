@@ -290,6 +290,7 @@ button {
 .more_bt {
     width: 170px;
     float: left;
+    margin-left: 15px;
 }
 
 .more_bt a {
@@ -306,7 +307,7 @@ button {
 }
 .more_bt a:hover {
     color: #000;
-    border: 2px solid #ff5a58;
+    border: 2px solid#4aafff;
 }
 .contact_bt {
     width: 170px;
@@ -329,6 +330,7 @@ button {
     color: #181818;
     border: 2px solid #ff5a58;
 }
+
 .services_section {
     width: 100%;
     float: left;
@@ -743,6 +745,7 @@ button {
     float: left;
     padding-left: 50px;
 }
+
 .mail_text_1 {
     width: 100%;
     float: left;

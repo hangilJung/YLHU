@@ -82,6 +82,9 @@
         </div>
       </div>
     </div>
+    
+    
+    
     <!-- 로그인 Modal창 -->
 
     <div class="modal fade" id="LoginModal" role="dialog"> <!-- 사용자 지정 부분① : id명 -->
@@ -130,11 +133,13 @@
   
           </div>
   
+          <!--
           <div class="modal-footer">
   
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
   
-          </div>
+          </div> 
+           -->
   
         </div>
   

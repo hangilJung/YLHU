@@ -59,7 +59,7 @@
             <ul class="navbar-nav mr-auto">
               <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="about.jsp">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="services.jsp">Services</a>

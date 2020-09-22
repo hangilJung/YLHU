@@ -47,7 +47,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="about.jsp">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="services.jsp">Services</a>
@@ -60,7 +60,7 @@
               </li>
               <%if(info!=null) {%>
               <li class="nav-item">
-                <a class="nav-link" href="#">My Page</a>
+                <a class="nav-link" href="mypage.jsp">My Page</a>
               </li>
               <%} %>
             </ul>

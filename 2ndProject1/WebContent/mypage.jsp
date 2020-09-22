@@ -80,7 +80,7 @@
               <input type="password" class="mail_text_1" placeholder="Password" name="Password ">
               <input type="text" class="mail_text_1" placeholder="Age" name="Age">
               <input type="text" class="mail_text_1" placeholder="Tel" name="Tel">
-              <div class="send_bt"><a href="#">Update</a></div>
+              <div class="send_bt"><a href="mypage.jsp">Update</a></div>
               </form>
             </div>
           </div>

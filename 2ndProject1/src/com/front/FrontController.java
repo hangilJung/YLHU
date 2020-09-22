@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.controller.Join_Service;
 import com.controller.Login_Service;
+import com.controller.Logout_Service;
 import com.controller.SendMessageService;
 import com.controller.detailView;
 import com.controller.myMessage;
@@ -30,6 +31,7 @@ public class FrontController extends HttpServlet{
 		map.put("myMessage.do", new myMessage());
 		map.put("detailView.do", new detailView());
 		map.put("Login_Service.do", new Login_Service());
+		map.put("Logout_Service.do", new Logout_Service());
 		}
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response)

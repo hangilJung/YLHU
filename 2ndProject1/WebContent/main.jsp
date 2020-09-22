@@ -75,109 +75,139 @@
         	if(info==null){
         %>
           <div class="contact_bt"><a class="nav-link" data-toggle="modal" href="#LoginModal">Login Us</a></div>
-          <div class="more_bt"><a class="nav-link" data-toggle="modal" href="#JoinModal">Join Us </a></div>
-          <%} %>
+          <div class="more_bt" ><a class="nav-link" data-toggle="modal" href="#JoinModal">Join Us </a></div>
+          <% } else{ %>
+        <div class="contact_bt" ><a class="nav-link" href="Logout_Service.do">Logout</a></div>
+        <% } %>
         </div>
       </div>
     </div>
-    <!-- 로그인 Modal -->
-    <div class = "modal fade" id="LoginModal" role="dialog" style="display:noe;" ,aria-hidden="true" >
-        <!-- 사용자 지정부분 : id -->
-        <div class="modal-dialog">
-        <!-- Modal content -->
+    <!-- 로그인 Modal창 -->
+
+    <div class="modal fade" id="LoginModal" role="dialog"> <!-- 사용자 지정 부분① : id명 -->
+
+      <div class="modal-dialog">
+        <!-- Modal content-->
+  
         <div class="modal-content">
+  
           <div class="modal-header">
-            <button type = "button" class="close" data-dismiss="modal">X</button>
+  
+            <button type="button" class="close" data-dismiss="modal">X</button>
+  
+            <!-- <h4 class="modal-title">모달 창 타이틀</h4> 사용자 지정 부분② : 타이틀 -->
+  
           </div>
-          <div class="modal-body"></div>
-          <!-- 로그인 -->
-          <nav id="menu" class="container">
-            <ul class="links">
-              <li>
-                <h4>로그인</h4>
-              </li>
-              <form action="Login_Service.do" method="post">
-              <li>
-                <label for="id">ID </label>
-                <input type="text" name="email" class="form-control2" placeholder="ID를 입력하시오" required="required"> 
-              </li> 
+  
+  
+  
+          <div class="modal-body">
+  
+  
+      <!-- 로그인, 회원가입  -->
+  
+            <nav id="menu" class="container">	
+  
+              <ul class="links" >
+  
+                <li><h4>로그인</h4></li> 
+  
+                  <form action="Login_Service.do" method="post" >
+  
+                    
+                    <label for="id">e-mail</label>
+                    <li><input name="email" type="text"  class="text_1" placeholder="Email 주소" required="required">                    </li>
+
+                    <label for="pw">password</label>
+                    <li><input name="pw" type="password"  class="text_1" placeholder="비밀번호"></li>
+                    <li><input type="submit" value="LogIn" class="button fit"  style="float: right" ></li>
+                  </form><br>
+  
+              </ul>
+  
               
-              <li>
-                <label for="pw">PW</label>
-                <input type="password" name="pw"  class="form-control2" placeholder="PW를 입력하시오" required="required">
-              </li>
-
-              <li>
-                <input type="submit" value="Login" class="button fit" style="float: right">
-              </li>
-             
-              </form>
-            </ul>
-
-            
-          </nav>
+            </nav>			
+  
+          </div>
+  
+          <div class="modal-footer">
+  
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  
+          </div>
+  
         </div>
-        <div class="modal-fotter">
-          <button type="button" class="btn-default" data-dismiss="modal">CLOSE</button>
-          </button>
-
-        </div>
-        </div>
+  
+      </div>
+  
     </div>
     
-    <div class = "modal fade" id="JoinModal" role="dialog" style="display:noe;" ,aria-hidden="true" >
-      <!-- 사용자 지정부분 : id -->
-      <div class="modal-dialog">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type = "button" class="close" data-dismiss="modal">X</button>
+      <!-- 회원가입 Modal창 -->
+
+      <div class="modal fade" id="JoinModal" role="dialog"> <!-- 사용자 지정 부분① : id명 -->
+
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+    
+          <div class="modal-content">
+    
+            <div class="modal-header">
+    
+              <button type="button" class="close" data-dismiss="modal">X</button>
+    
+              <!-- <h4 class="modal-title">모달 창 타이틀</h4> 사용자 지정 부분② : 타이틀 -->
+    
+            </div>
+
+            <div class="modal-body">
+
+              <nav id="menu" class="container">
+                <ul class="links" >
+                  <li><h4>회원가입</h4></li> 
+    
+                    <form action="Join_Service.do" method="post" >
+    
+                      <li>
+                      <label for="email">e-mail</label>
+                      <input name="email" type="text"  class="text_1" placeholder="Email 주소" required="required">
+                      </li>
+                      
+                      <li>
+                      <label for="pw">password</label>
+                      <input name="pw" type="password"  class="text_1" placeholder="비밀번호">
+                      </li>
+                      <li>
+                        <label for="age">age</label>
+                        <input name="age" type="text"  class="text_1" placeholder="연령">
+                      </li>
+                      <li>
+                        <label for="tel">tel</label>
+                        <input name="tel" type="text"  class="text_1" placeholder="연락처">
+                      </li>
+  
+                      <li><input type="submit" value="Join" class="button fit"  style="float: right" ></li>
+    
+                    </form><br>
+    
+                </ul>
+    
+                
+              </nav>			
+    
+            </div>
+    
+          </div>
+    
         </div>
-        <div class="modal-body"></div>
-        <!-- 회원가입 -->
-        <nav id="menu" class="container">
-
-          <ul class="links">
-            <li>
-              <h4>회원가입</h4>
-            </li>
-            <form action="Join_Service.do" method="post">
-              <li>
-                <input type="text" name="email" class="form-control2" placeholder="ID">
-              </li>
-              <li>
-                <input type="password" name="pw" class="form-control2" placeholder="PW">
-              </li>
-              <li>
-                <input type="text" name="age" class="form-control2" placeholder="나이">
-              </li>
-              <li>
-                <input type="text" name="tel" class="form-control2" placeholder="연락처">
-              </li>
-              <li>
-                <input type="submit" value="Join" class="button fit" style="float:right">
-              </li>
-           
-            </form>
-          </ul>
-        </nav>
+    
       </div>
-      <div class="modal-fotter">
-        <button type="button" class="btn-default" data-dismiss="modal">CLOSE</button>
-        </button>
-
+  
+      <div class="header_right">
+        <img src="images/banner-img.png" class="banner_img">
       </div>
-      </div>
-  </div>
-
-
-
-
-    <div class="header_right">
-      <img src="images/banner-img.png" class="banner_img">
     </div>
-  </div>
-  <!--header section end -->
+    <!--header section end -->
 
 <!--footer section start -->
 <div class="footer_section layout_padding margin_top_90">

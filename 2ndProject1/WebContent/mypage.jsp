@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <!-- site metas -->
-  <title>Contact</title>
+  <title>MyPage</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -39,7 +39,7 @@
   <!--header section start -->
   <div class="header_section header_bg">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="logo"><a href="main.html"><img src="images/logo.png"></a></div>
+      <div class="logo"><a href="main.jsp"><img src="images/logo.png"></a></div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -47,16 +47,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about.jsp">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
+            <a class="nav-link" href="services.jsp">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
+            <a class="nav-link" href="contact.jsp">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="mypage.html">My Page</a>
+            <a class="nav-link" href="mypage.jsp">My Page</a>
           </li>
         </ul>
       </div>

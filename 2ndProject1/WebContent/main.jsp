@@ -52,20 +52,20 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="mainService.jsp">뉴스 판별하기</a>
+                <a class="nav-link" href="about.jsp">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="mainBoard.jsp">게시판</a>
+                <a class="nav-link" href="services.jsp">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.jsp">문의사항</a>
+                <a class="nav-link" href="contact.jsp">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Board.jsp">Board</a>
               </li>
               <%if(info!=null) {%>
               <li class="nav-item">
-                <a class="nav-link" href="list.jsp">나의 게시글</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="mypage.jsp">나의 페이지</a>
+                <a class="nav-link" href="mypage.jsp">My Page</a>
               </li>
               <%} %>
             </ul>

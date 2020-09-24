@@ -1,3 +1,4 @@
+<%@page import="com.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -36,9 +37,9 @@
     <!-- hg -->
 <link rel="stylesheet" href = "css/hg.css">
 	<style>
-	input[type="submit"] {
+	.mail_section input[type="submit"] {
     width: 170px;
-    float: left;
+    float: right;
     margin-top: 40px;
     margin-bottom: 40px;
     font-size: 20px;
@@ -48,10 +49,20 @@
     padding: 10px 0px;
     text-transform: uppercase;
     border-radius: 30px;
-    border:0px;}
+    border:0px;  
+  }
+    .mail_section{
+      text-align: center;;
+    }
+    .del{
+      text-align: center;
+    }
+    .del p{
+    font-size: 30px;
+    }
     .del input[type="submit"]{
     width: 170px;
-    float: left;
+    float: right;
     margin-top: 40px;
     margin-bottom: 40px;
     font-size: 20px;
@@ -68,6 +79,9 @@
 </head>
 
 <body>
+	<%
+		MemberDTO info = (MemberDTO)session.getAttribute("info");
+	%>
   <!--header section start -->
   <div class="header_section header_bg">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -101,7 +115,7 @@
   <!-- ·Î±×ÀÎ ¹× È¸¿ø°¡ÀÔ ÆäÀÌÁö -->
   <div class="contact_section layout_padding">
     <div class="container-fluid">
-      <h1 class="what_taital">¼öÁ¤/È¸¿øÅ»Åð</h1>
+      <h1 class="what_taital" >¼öÁ¤/È¸¿øÅ»Åð</h1>
       <p class="amet_text">amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
 
       <div class="contact_section2">
@@ -122,6 +136,12 @@
             <div class="del">
             	<h1>DELETE</h1>
        			<form action="Drop_Service.do" method="get">
+       			<br>
+       			<br>
+       			<p><%= info.getEmail()%>´Ô<br><br>
+       			È¸¿øÅ»Åð¸¦ ÁøÇàÇÏ½Ã°Ú½À´Ï±î?</p>
+       			<br>
+       			<br>
        			<input type="submit" value="È¸¿øÅ»Åð" >
        			</form>
        		</div>

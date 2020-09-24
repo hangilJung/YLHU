@@ -58,7 +58,6 @@
     border-bottom: 1px solid #050000 !important;
     padding-right: 20%;
     border: 0px
-  }
 </style>
 </head>
 <body>
@@ -69,7 +68,7 @@
     <div class="header_section">
       <div class="header_left">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="logo"><a href="main.jsp"><img src="images/logo.png"></a></div>
+          <div class="logo"><a href="main.jsp"><img src="images/YLHU.png"></a></div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -105,12 +104,12 @@
           <div class="contact_bt"><a class="nav-link" data-toggle="modal" href="#LoginModal">Login Us</a></div>
           <div class="more_bt" ><a class="nav-link" data-toggle="modal" href="#JoinModal">Join Us </a></div>
           <% } else{ %>
-        <div class="contact_bt" ><a class="nav-link" href="Logout_Service.do">Logout</a></div>
+          <div class="contact_bt" ><a class="nav-link_1" href="Logout_Service.do">Logout</a></div>
         <% } %>
         </div>
       </div>
-    </div>
-    
+      </div>
+       
     
     
     <!-- 로그인 Modal창 -->

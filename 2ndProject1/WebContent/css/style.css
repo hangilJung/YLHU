@@ -789,7 +789,7 @@ button {
 }
 
 .update_bt{
-	width: 170px;
+   width: 170px;
     float: left;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -803,7 +803,7 @@ button {
 }
 .drop_bt {
     width: 170px;
-	loat: right;
+   loat: right;
     margin-top: 40px;
     margin-bottom: 40px;
     color: #ffffff;

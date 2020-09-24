@@ -35,6 +35,30 @@
 <style>
 	h2 { text-align: center; }
 	label{margin-top:.5rem;}
+	.container input[type="submit"] {
+    width: 150px;
+    float: right;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    background-color: black;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border:0px;  
+  }
+  .text_1{
+  	width: 100%;
+    float: center;
+    font-size: 18px;
+    color: #666666;
+    background-color: transparent !important;
+    border-bottom: 1px solid #050000 !important;
+    padding-right: 20%;
+    border: 0px
+  }
 </style>
 </head>
 <body>
@@ -120,11 +144,12 @@
                 <li><h2>로그인</h2></li> 
                 
                   <form action="Login_Service.do" method="post" >
-  
-                    
-                    <label for="id">E-MAIL</label>
-                    <li><input name="email" type="text"  class="text_1" placeholder="Email 주소" required="required">                    </li>
 
+                    <label for="id">E-MAIL</label>
+                    <br>
+                    <li><input name="email" type="text"  class="text_1" placeholder="이메일주소" required="required">
+                    <br><br>
+                    </li>
                     <label for="pw">PASSWORD</label>
                     <li><input name="pw" type="password"  class="text_1" placeholder="비밀번호"></li>
                     <li><input type="submit" value="LogIn" class="button fit"  style="float: right" ></li>

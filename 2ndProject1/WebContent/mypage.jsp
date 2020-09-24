@@ -124,10 +124,10 @@
             <div class="mail_section">
               <h1>UPDATE</h1>
               <form action="Update_Service.do" method="get">
-              <input type="text" class="mail_text_1" placeholder="E-mail" name="email">
+              <input type="text" class="mail_text_1" placeholder="<%=info.getEmail() %>" name="email">
               <input type="password" class="mail_text_1" placeholder="Password" name="password ">
-              <input type="text" class="mail_text_1" placeholder="Age" name="age">
-              <input type="text" class="mail_text_1" placeholder="Tel" name="tel">
+              <input type="text" class="mail_text_1" placeholder="Age : <%=info.getAge() %>" name="age">
+              <input type="text" class="mail_text_1" placeholder="Tel: <%=info.getTel() %>" name="tel">
          	  <input type="submit" value="¼öÁ¤ÇÏ±â">
               </form>
             </div>
@@ -142,7 +142,7 @@
        			È¸¿øÅ»Åð¸¦ ÁøÇàÇÏ½Ã°Ú½À´Ï±î?</p>
        			<br>
        			<br>
-       			<input type="submit" value="È¸¿øÅ»Åð" >
+       			<input type="submit" onclick="btn1_event()" value="È¸¿øÅ»Åð" >
        			</form>
        		</div>
        	</div>

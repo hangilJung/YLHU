@@ -58,20 +58,22 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="main.jsp">Home</a>
+                <a class="nav-link" href="mainService.jsp">뉴스 판별하기</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.jsp">About</a>
+                <a class="nav-link" href="mainBoard.jsp">게시판</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="services.jsp">Services</a>
+                <a class="nav-link" href="contact.jsp">문의사항</a>
+              </li>
+              <%if(info!=null) {%>
+              <li class="nav-item">
+                <a class="nav-link" href="list.jsp">나의 게시글</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="team.jsp">Team</a>
+                <a class="nav-link" href="mypage.jsp">나의 페이지</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.jsp">Contact Us</a>
-              </li>
+              <%} %>
             </ul>
           </div>
         </nav>
@@ -93,8 +95,8 @@
           	  </tr>
               <tr>  
                 <td colspan="2"  class="text-center">
-                <input type="submit" class="my-btn" value="수정완료"></input>
-                <a href="viewBoard.jsp?title=<%=title%>&content=<%=content%>&msg_num=<%=msg_num%>"><button class="my-btn" type="button">뒤로가기</button></a>
+                <input type="submit" class="my-btn-primary" value="수정완료"></input>
+                <a href="viewBoard.jsp?title=<%=title%>&content=<%=content%>&msg_num=<%=msg_num%>"><button class="my-btn-primary" type="button">뒤로가기</button></a>
                 </td>
            	  </tr>
          	 </table>

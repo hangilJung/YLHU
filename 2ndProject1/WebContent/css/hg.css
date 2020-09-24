@@ -98,3 +98,22 @@ overflow-y: hidden;
 .my-blank{
 	font-color:white;
 }
+
+.my-btn-primary {
+    color: #fff;
+    background-color: #1b5a8d;
+    border-color: #1b5a8d;
+}
+
+.al{
+	margin:0 auto;
+	width: 100%;
+}
+
+#main{
+	float: left;
+	width: 950px;
+	height: 600px;
+	text-align: middle;
+	overflow: auto; 
+}

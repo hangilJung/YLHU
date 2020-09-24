@@ -4,6 +4,7 @@
 <%@page import="com.model.MessageDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>Board</title>
+<title>Notice Board</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content=""> 
@@ -42,11 +43,8 @@
 <link href="js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-	<%
+	<% 
 		MemberDTO info = (MemberDTO)session.getAttribute("info");
-		MessageDAO dao = new MessageDAO();
-		ArrayList<MessageDTO> list1 = dao.viewAll();
-		ArrayList<MessageDTO> list2 = dao.myView(info.getEmail());
 	%>
   <!--header section start -->
     <div class="header_section header_bg">
@@ -78,121 +76,36 @@
         </nav>
     </div>
     <!--header section end -->
-    <!--board section start  -->
-    <div class="row">
-        <div class="col">
-          <div class="card shadow">
-            <div class="card-header border-0">
-              <h3 class="mb-0"><%if(info.getEmail().equals("admin")){%>고객 문의사항<%}else { %>내가 쓴 글 목록<%} %></h3>
+    <!--viewBoard section start  -->
+    <p style="text-align:center;">여기에 판별이 필요한 제목이나 기사를 적어주세요</p>
+    	<form action="mainService.do" method="get">
+    		<div style="margin: 0px 250px 0px 250px;">
+             <table class="table table-hover">
+              <tr>  
+                <td>작성자 E-mail</td>
+                <td><textarea type="text"  class="form-control" name="email" readonly><%=info.getEmail() %></textarea></td>
+          	  </tr>
+              <tr>  
+                <td>제목</td>
+                <td><textarea type="text"  class="form-control" placeholder="제목을 적어주세요." name="title"></textarea></td>
+          	  </tr>
+          	  <tr>
+                <td>글내용</td>
+                <td><textarea rows="10" cols="50" name="content" placeholder="내용을 적어주세요." class="view"></textarea></td>
+          	  </tr>
+          	  <tr>
+          	  	<td>출처</td>
+          	  	<td><textarea type="text" class="form-control" placeholder="https://www.naver.com" name="url"></textarea></td>
+          	  </tr>
+          	  <tr>
+                <td colspan="2"  class="text-center">
+                <input type="submit" class="my-btn-primary" value="판별하기"></input>
+                </td>
+           	  </tr>
+         	 </table>
             </div>
-            <div class="table-responsive">
-              <table class="table align-items-center table-flush table-hover">
-                <thead class="thead-light">                
-                  <tr>
-                    <th scope="col">번호</th>
-                    <th scope="col">제목</th>
-                    <th scope="col">작성자</th>
-                    <th scope="col">시간</th>    
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                <div class="detail-view"></div>
-                	<%if(info.getEmail().equals("admin")){
-                		for(int i = 0; i<list1.size();i++){ %>                	
-                  <tr>                    
-                    <td>
-                      <%=i+1 %>
-                    </td>
-                    <td>
-                      <%=list1.get(i).getTitle() %>
-                    </td>                    
-                    <td>
-                      <%=list1.get(i).getSender() %>
-                    </td>
-                    <td>
-                      <%=list1.get(i).getMsg_Day() %>
-                    </td>
-                    <td><a href="viewBoard.jsp?msg_num=<%=list1.get(i).getMsg_num()%>"><button class="table-update my-btn-primary">상세보기</button></td></a>
-                    <td><button onclick="btn1_event()" class="table-update my-btn-primary">삭제</button></td>
-                  </tr> 
-                  <script type="text/javascript">
-						function btn1_event(){
-							if(confirm("정말 삭제하시겠습니까?")==true){
-								document.location.href="removeBoard.do?msg_num=<%=list1.get(i).getMsg_num()%>";
-							}else{
-								return;
-							}
-								}
-					</script>
-                  <% }}else {%>
-               		
-                  	<% for(int i = 0; i<list2.size();i++){%>
-                  <tr>                    
-                    <td>
-                      <%=i+1 %>
-                    </td>
-                    <td>
-                      <%=list2.get(i).getTitle() %>
-                    </td>                    
-                    <td>
-                      <%=list2.get(i).getSender() %>
-                    </td>
-                    <td>
-                      <%=list2.get(i).getMsg_Day() %>
-                    </td >
-                     <td><a href="viewBoard.jsp?msg_num=<%=list2.get(i).getMsg_num()%>" name="viewBoard_confirm"><button class="table-update my-btn-primary">상세보기</button></td></a>
-                    <td><button onclick="btn2_event()" class="table-update my-btn-primary">삭제</button></td>
-                  </tr>
-                    <script type="text/javascript">
-						function btn2_event(){
-							if(confirm("정말 삭제하시겠습니까?")==true){
-								document.location.href="removeBoard.do?msg_num=<%=list2.get(i).getMsg_num()%>";
-							}else{
-								return;
-							}
-								}
-					</script>
-                  
-                  
-                  		<%}} %>
-                                              
-                </tbody>
-              </table>
-            </div>
-            
-            <div class="card-footer py-4">
-              <nav aria-label="...">
-                <ul class="pagination justify-content-end mb-0">
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1">
-                      <i class="fas fa-angle-left"></i>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                  </li>
-                  <li class="page-item active">
-                    <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">
-                      <i class="fas fa-angle-right"></i>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>     
-    </div>
-    	 	
-     
-    <!--board section end -->
+        </form>
+    <!--viewBoard section end -->
     <!--footer section start -->
     <div class="footer_section layout_padding margin_top_90">
       <div class="container">

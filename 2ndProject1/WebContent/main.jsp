@@ -32,6 +32,10 @@
 <link rel="stylesheet" href="css/owl.carousel.min.css">
 <link rel="stylesheet" href="css/owl.theme.default.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<style>
+	h2 { text-align: center; }
+	label{margin-top:.5rem;}
+</style>
 </head>
 <body>
 	<%
@@ -113,15 +117,15 @@
   
               <ul class="links" >
   
-                <li><h4>로그인</h4></li> 
-  
+                <li><h2>로그인</h2></li> 
+                
                   <form action="Login_Service.do" method="post" >
   
                     
-                    <label for="id">e-mail</label>
+                    <label for="id">E-MAIL</label>
                     <li><input name="email" type="text"  class="text_1" placeholder="Email 주소" required="required">                    </li>
 
-                    <label for="pw">password</label>
+                    <label for="pw">PASSWORD</label>
                     <li><input name="pw" type="password"  class="text_1" placeholder="비밀번호"></li>
                     <li><input type="submit" value="LogIn" class="button fit"  style="float: right" ></li>
                   </form><br>
@@ -169,27 +173,25 @@
 
               <nav id="menu" class="container">
                 <ul class="links" >
-                  <li><h4>회원가입</h4></li> 
-    
+                  <li><h2>회원가입</h2></li> 
+    				
                     <form action="Join_Service.do" method="post" >
     
-                      <li>
-                      <label for="email">e-mail</label>
-                      <input name="email" type="text"  class="text_1" placeholder="Email 주소" required="required">
-                      </li>
                       
-                      <li>
-                      <label for="pw">password</label>
-                      <input name="pw" type="password"  class="text_1" placeholder="비밀번호">
-                      </li>
-                      <li>
-                        <label for="age">age</label>
-                        <input name="age" type="text"  class="text_1" placeholder="연령">
-                      </li>
-                      <li>
-                        <label for="tel">tel</label>
-                        <input name="tel" type="text"  class="text_1" placeholder="연락처">
-                      </li>
+                      <label for="email">E-MAIL</label>
+                      <li><input name="email" type="text"  class="text_1" placeholder="Email 주소" required="required"></li>
+                      
+                      
+                      <label for="pw">PASSWORD</label>
+                      <li><input name="pw" type="password"  class="text_1" placeholder="비밀번호"></li>
+                      
+                      
+                      <label for="age">AGE</label>
+                      <li><input name="age" type="text"  class="text_1" placeholder="연령"></li>
+                      
+                      
+                      <label for="tel">TELPHONE</label>
+                      <li><input name="tel" type="text"  class="text_1" placeholder="연락처"></li>
   
                       <li><input type="submit" value="Join" class="button fit"  style="float: right" ></li>
     

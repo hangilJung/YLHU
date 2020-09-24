@@ -21,6 +21,7 @@ public class Update_Service implements Command {
 		
 		String email = info.getEmail();
 		String pw = request.getParameter("pw");
+		System.out.println("업데이트서비스에서 나이"+request.getParameter("age"));
 		int age = Integer.parseInt(request.getParameter("age"));
 		String tel = request.getParameter("tel");
 		

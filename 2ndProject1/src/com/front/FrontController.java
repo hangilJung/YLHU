@@ -9,10 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.controller.Drop_Service;
 import com.controller.Join_Service;
 import com.controller.Login_Service;
 import com.controller.Logout_Service;
 import com.controller.SendMessageService;
+import com.controller.Update_Service;
 import com.controller.detailView;
 import com.controller.mainService;
 import com.controller.myMessage;
@@ -36,6 +38,8 @@ public class FrontController extends HttpServlet{
 		map.put("Logout_Service.do", new Logout_Service());
 		map.put("updateBoard.do", new updateBoard());
 		map.put("mainService.do", new mainService());
+		map.put("Update_Service.do", new Update_Service());
+		map.put("Drop_Service.do", new Drop_Service());
 		}
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response)

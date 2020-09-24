@@ -134,4 +134,27 @@ public class MemberDAO {
 		return cnt;
 	}
 
+	public int drop(MemberDTO dto) {
+		int cnt=0;
+		getConn();
+		
+		try {
+			String sql = "delete news_member where email = ?";
+			pst = conn.prepareStatement(sql);
+			
+			pst.setString(1, dto.getEmail());
+			
+			cnt = pst.executeUpdate();
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+		 close();
+		}
+		
+		
+		return cnt;
+	}
+
 }

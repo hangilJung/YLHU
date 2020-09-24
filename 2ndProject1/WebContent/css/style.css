@@ -788,6 +788,32 @@ button {
     border-radius: 30px;
 }
 
+.update_bt{
+	width: 170px;
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #ff5a58;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border-radius: 30px;
+}
+.drop_bt {
+    width: 170px;
+	loat: right;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #1b5a8d;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border-radius: 30px;
+}
+
 .footer_section{
     width: 100%;
     float: left;

@@ -33,6 +33,38 @@
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
     media="screen">
+    <!-- hg -->
+<link rel="stylesheet" href = "css/hg.css">
+	<style>
+	input[type="submit"] {
+    width: 170px;
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #ff5a58;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border:0px;}
+    .del input[type="submit"]{
+    width: 170px;
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #1b5a8d;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border:0px;}
+    }
+  
+	</style>
 </head>
 
 <body>
@@ -78,18 +110,24 @@
             <div class="mail_section">
               <h1>UPDATE</h1>
               <form action="Update_Service.do" method="get">
-              <input type="text" class="mail_text_1" placeholder="ID" name="ID">
-              <input type="password" class="mail_text_1" placeholder="Password" name="Password ">
-              <input type="text" class="mail_text_1" placeholder="Age" name="Age">
-              <input type="text" class="mail_text_1" placeholder="Tel" name="Tel">
-              <div class="send_bt"><a href="mypage.jsp">Update</a></div>
+              <input type="text" class="mail_text_1" placeholder="E-mail" name="email">
+              <input type="password" class="mail_text_1" placeholder="Password" name="password ">
+              <input type="text" class="mail_text_1" placeholder="Age" name="age">
+              <input type="text" class="mail_text_1" placeholder="Tel" name="tel">
+         	  <input type="submit" value="¼öÁ¤ÇÏ±â">
               </form>
             </div>
           </div>
-        </div>
+          <div class="col-md-6 padding_0" id="con-al">
+            <div class="del">
+            	<h1>DELETE</h1>
+       			<form action="Drop_Service.do" method="get">
+       			<input type="submit" value="È¸¿øÅ»Åð" >
+       			</form>
+       		</div>
+       	</div>
+       </div>	  
       </div>
-      </div>
-    </div>
     <!-- contact section end -->
     <!--footer section start -->
     <div class="footer_section layout_padding margin_top_90">

@@ -15,7 +15,6 @@ import com.controller.Login_Service;
 import com.controller.Logout_Service;
 import com.controller.SendMessageService;
 import com.controller.Update_Service;
-import com.controller.detailView;
 import com.controller.mainService;
 import com.controller.myMessage;
 import com.controller.removeBoard;
@@ -33,7 +32,6 @@ public class FrontController extends HttpServlet{
 		map.put("Join_Service.do", new Join_Service());
 		map.put("removeBoard.do", new removeBoard());
 		map.put("myMessage.do", new myMessage());
-		map.put("detailView.do", new detailView());
 		map.put("Login_Service.do", new Login_Service());
 		map.put("Logout_Service.do", new Logout_Service());
 		map.put("updateBoard.do", new updateBoard());

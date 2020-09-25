@@ -58,6 +58,10 @@
     border-bottom: 1px solid #050000 !important;
     padding-right: 20%;
     border: 0px
+    }
+   .about_text{
+   	text-align : center;
+   }
 </style>
 </head>
 <body>
@@ -72,7 +76,7 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div  style="font-weight: bold; width: 100px;" class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
                 <a class="nav-link" href="mainService.jsp">뉴스 판별하기</a>
@@ -257,17 +261,17 @@
           <p class="dolor_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
         </div>
         <div class="col-lg-3 col-sm-6">
-          <h4 class="about_text">Instagram</h4>
+          <h4 class="about_text">NEWS PAGE</h4>
           <div class="footer_images">
             <div class="footer_images_left">
-              <div class="image_12"><img src="images/img-12.png"></div>
-              <div class="image_12"><img src="images/img-12.png"></div>
-              <div class="image_12"><img src="images/img-12.png"></div>
+              <div class="image_12"><img src="images/"></div>
+              <div class="image_12"><img src="images/"></div>
+              <div class="image_12"><img src="images/"></div>
             </div>
             <div class="footer_images_right">
-              <div class="image_12"><img src="images/img-12.png"></div>
-              <div class="image_12"><img src="images/img-12.png"></div>
-              <div class="image_12"><img src="images/img-12.png"></div>
+              <div class="image_12"><img src="images/"></div>
+              <div class="image_12"><img src="images/"></div>
+              <div class="image_12"><img src="images/"></div>
             </div>
           </div>
         </div>

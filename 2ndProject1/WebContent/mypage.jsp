@@ -90,7 +90,7 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div  style="font-weight: bold; width: 100px;" class="collapse navbar-collapse" id="navbarSupportedContent">
          	<li class="nav-item">
                 <a class="nav-link" href="mainService.jsp">뉴스 판별하기</a>
               </li>

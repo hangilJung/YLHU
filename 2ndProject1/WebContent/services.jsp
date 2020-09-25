@@ -61,7 +61,7 @@
               <%if(info!=null) {%>
               <li class="nav-item">
                 <a class="nav-link" href="mypage.jsp">My Page</a>
-              </li>
+              </li>¤¤
               <%} %>
             </ul>
           </div>

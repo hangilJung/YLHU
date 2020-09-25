@@ -51,10 +51,10 @@
                 <a class="nav-link" href="about.jsp">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="services.jsp">Services</a>
+                <a class="nav-link" href="services.jsp">뉴스판별하기</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.jsp">Contact Us</a>
+                <a class="nav-link" href="contact.jsp"></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Board.jsp">Board</a>

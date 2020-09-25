@@ -52,7 +52,7 @@
     border:0px;  
   }
     .mail_section{
-      text-align: center;;
+      text-align: center;
     }
     .del{
       text-align: center;
@@ -117,7 +117,6 @@
     <div class="container-fluid">
       <h1 class="what_taital" >¼öÁ¤/È¸¿øÅ»Åð</h1>
       <p class="amet_text">amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
-
       <div class="contact_section2">
         <div class="row">
           <div class="col-md-6 padding_left_0">

@@ -78,24 +78,26 @@
                 <a class="nav-link" href="mainService.jsp">뉴스 판별하기</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="mainBoard.jsp">게시판</a>
+                <a class="nav-link" href="mainBoard.jsp">판별된 뉴스</a>
               </li>
+              <%if(info==null) {%>
               <li class="nav-item">
-                <a class="nav-link" href="contact.jsp">문의사항</a>
+                <a class="nav-link" href="contact.jsp">문의하기</a>
               </li>
+              <%} %>
               <%if(info!=null) {%>
               <li class="nav-item">
-                <a class="nav-link" href="list.jsp">나의 게시글</a>
+                <a class="nav-link" href="list.jsp">게시판</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="mypage.jsp">나의 페이지</a>
+                <a class="nav-link" href="mypage.jsp">회원정보수정</a>
               </li>
               <%} %>
             </ul>
           </div>
         </nav>
       <div class="banner_main">
-        <h1 class="banner_taital">financial <br>Service</h1>
+        <h1 class="banner_taital">FAKE NEWS <br>Service</h1>
         <p class="banner_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
         <div class="btn_main">
         <%

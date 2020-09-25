@@ -35,6 +35,25 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 <!-- hg -->
 <link rel="stylesheet" href = "css/hg.css">
+	<style>
+	.mail_section input[type="submit"] {
+    width: 170px;
+    float: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #ff5a58;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border:0px;  
+  }
+    .mail_section{
+      text-align: center;
+    }
+	</style>
 </head>
 <body>
 	<%
@@ -43,7 +62,7 @@
   <!--header section start -->
     <div class="header_section header_bg">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="logo"><a href="main.jsp"><img src="images/YLHU.png"></a></div>
+          <div class="logo"><a href="main.jsp"><img src="images/YLHU.png" height="100"></a></div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -84,7 +103,7 @@
                 <input type="text" class="mail_text_1" placeholder="Email" name="msg_email">
                 <input type="text" class="mail_text_1" placeholder="Title" name="title">
                 <textarea class="massage_text" placeholder="Message" rows="5" id="comment" name="content"></textarea>
-                <div><input type="submit" id="con_send_submit" value="send"></div>
+                <input type="submit" value="send">
               </div>
             </div>
             </form>

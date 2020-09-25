@@ -29,7 +29,7 @@ public class mainService implements Command{
 			System.out.println("글쓰기 실패");
 		}
 		
-		return "mainService.jsp";
+		return "mainBoard.jsp";
 	}
 
 }

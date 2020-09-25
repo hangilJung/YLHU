@@ -79,12 +79,12 @@
     </div>
     <!--header section end -->
     <!--board section start  -->
+    <div class="contact_section layout_padding">
+    <div class="container-fluid">
+      <h1 class="what_taital"><%if(info.getEmail().equals("admin")){%>고객 문의사항<%}else { %>내가 쓴 글 목록<%} %></h1>
     <div class="row">
         <div class="col">
           <div class="card shadow">
-            <div class="card-header border-0">
-              <h3 class="mb-0"><%if(info.getEmail().equals("admin")){%>고객 문의사항<%}else { %>내가 쓴 글 목록<%} %></h3>
-            </div>
             <div class="table-responsive">
               <table class="table align-items-center table-flush table-hover">
                 <thead class="thead-light">                
@@ -191,7 +191,8 @@
         </div>     
     </div>
     	 	
-     
+</div>
+</div>     
     <!--board section end -->
     <!--footer section start -->
     <div class="footer_section layout_padding margin_top_90">

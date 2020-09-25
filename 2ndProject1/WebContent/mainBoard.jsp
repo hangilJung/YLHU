@@ -54,21 +54,23 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="mainService.jsp">뉴스 판별하기</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="mainBoard.jsp">게시판</a>
+                <a class="nav-link" href="mainBoard.jsp">판별된 뉴스</a>
               </li>
+              <%if(info==null) {%>
               <li class="nav-item">
-                <a class="nav-link" href="contact.jsp">문의사항</a>
+                <a class="nav-link" href="contact.jsp">문의하기</a>
               </li>
+              <%} %>
               <%if(info!=null) {%>
               <li class="nav-item">
                 <a class="nav-link" href="list.jsp">나의 게시글</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="mypage.jsp">나의 페이지</a>
+                <a class="nav-link" href="mypage.jsp">회원정보수정</a>
               </li>
               <%} %>
             </ul>
@@ -77,12 +79,13 @@
     </div>
     <!--header section end -->
     <!--board section start  -->
-    <div class="row">
+    <div class="contact_section layout_padding">
+    <div class="container-fluid">
+      <h1 class="what_taital" >판별된 뉴스 리스트</h1>
+     <div class="contact_section2">
+    	<div class="row">
         <div class="col">
-          <div class="card shadow">
-            <div class="card-header border-0">
-              <h3 class="mb-0">게시글</h3>
-            </div>
+          <div class="card shadow">  
             <div class="table-responsive">
               <table class="table align-items-center table-flush table-hover">
                 <thead class="thead-light">                
@@ -131,6 +134,7 @@
               </table>
             </div>
             
+            
             <div class="card-footer py-4">
               <nav aria-label="...">
                 <ul class="pagination justify-content-end mb-0">
@@ -159,7 +163,9 @@
           </div>
         </div>     
     </div>
-    	 	
+  </div>
+</div>  	 	
+</div>  	 	
      
     <!--board section end -->
     <!--footer section start -->

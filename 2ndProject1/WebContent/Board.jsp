@@ -53,21 +53,19 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+ 
               <li class="nav-item">
-                <a class="nav-link" href="about.jsp">About</a>
+                <a class="nav-link" href="services.jsp">뉴스 판별하기</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="services.jsp">Services</a>
+                <a class="nav-link" href="contact.jsp">문의사항</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.jsp">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Board.jsp">Board</a>
+                <a class="nav-link" href="Board.jsp">나의 게시글</a>
               </li>
               <%if(info!=null) {%>
               <li class="nav-item">
-                <a class="nav-link" href="#">My Page</a>
+                <a class="nav-link" href="#">나의 페이지</a>
               </li>
               <%} %>
             </ul>
@@ -76,11 +74,17 @@
     </div>
     <!--header section end -->
     <!--viewBoard section start  -->
-              <div class="row">
+     
+    
+    <div class="contact_section layout_padding">
+    <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <h2 class="text-center">게시글 쓰기</h2>
-        <form action="#" method="post" \>
+    <div class="container-fluid">
+      <h1 class="what_taital" >게시글 쓰기</h1>
+    </div>
+    
+        <form action="#" method="post">
           <table class="table table-hover">
                 <td>제목</td>
                 <td><input type="text"  class="form-control" name="title"></td>
@@ -100,6 +104,7 @@
           </table>
         </form>
     </div>
+</div>
 </div>
     <!--viewBoard section end -->
     <!--footer section start -->

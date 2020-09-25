@@ -41,6 +41,22 @@
 <!-- Icons -->
 <link href="js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
 <link href="js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+<style>
+.table input[type="submit"] {
+    width: 170px;
+    float: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #ff5a58;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border:0px;  
+  }
+</style>
 </head>
 <body>
 	<% 
@@ -77,7 +93,11 @@
     </div>
     <!--header section end -->
     <!--viewBoard section start  -->
-    <p style="text-align:center;">여기에 판별이 필요한 제목이나 기사를 적어주세요</p>
+    <div class="contact_section layout_padding">
+    <div class="container-fluid">
+      <h1 class="what_taital" >뉴스 판별하기</h1>
+    	<p style="text-align:center;">여기에 판별이 필요한 제목이나 기사를 적어주세요</p>
+    </div>
     	<form action="mainService.do" method="get">
     		<div style="margin: 0px 250px 0px 250px;">
              <table class="table table-hover">
@@ -99,12 +119,13 @@
           	  </tr>
           	  <tr>
                 <td colspan="2"  class="text-center">
-                <input type="submit" class="my-btn-primary" value="판별하기"></input>
+                <input type="submit" value="판별하기"></input>
                 </td>
            	  </tr>
          	 </table>
             </div>
         </form>
+       </div>
     <!--viewBoard section end -->
     <!--footer section start -->
     <div class="footer_section layout_padding margin_top_90">

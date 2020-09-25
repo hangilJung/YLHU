@@ -58,19 +58,17 @@
                 <a class="nav-link" href="mainService.jsp">뉴스 판별하기</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="mainBoard.jsp">판별된 뉴스</a>
+                <a class="nav-link" href="mainBoard.jsp">게시판</a>
               </li>
-              <%if(info==null) {%>
               <li class="nav-item">
-                <a class="nav-link" href="contact.jsp">문의하기</a>
+                <a class="nav-link" href="contact.jsp">문의사항</a>
               </li>
-              <%} %>
               <%if(info!=null) {%>
               <li class="nav-item">
                 <a class="nav-link" href="list.jsp">나의 게시글</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="mypage.jsp">회원정보수정</a>
+                <a class="nav-link" href="mypage.jsp">나의 페이지</a>
               </li>
               <%} %>
             </ul>

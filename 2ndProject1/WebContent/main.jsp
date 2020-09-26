@@ -102,7 +102,20 @@
         </nav>
       <div class="banner_main">
         <h1 class="banner_taital">FAKE NEWS <br>Service</h1>
-        <p class="banner_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
+        <% 
+        if(info==null){ 
+  		%>	
+        	<p class="banner_text">
+        	저희 서비스는 당신이 진실인지 거짓인지 알고싶은 뉴스 원본을 그대로 가져오시면 
+        	<br>뉴스의 진위여부를 알려주는 서비스를 제공하고 있습니다.
+        	<br>Login을 먼저 진행해주세요 ^^!! </p>
+        	<% } else{%>
+        	<p class="banner_text"><%=info.getEmail() %>님 환영합니다</p>
+        <%}%>
+        	
+        
+        
+ 
         <div class="btn_main">
         <%
         	if(info==null){
@@ -264,14 +277,14 @@
           <h4 class="about_text">NEWS PAGE</h4>
           <div class="footer_images">
             <div class="footer_images_left">
-              <div class="image_12"><img src="images/"></div>
-              <div class="image_12"><img src="images/"></div>
-              <div class="image_12"><img src="images/"></div>
+              <div class="image_12"><img src="images/a1.png"></div>
+              <div class="image_12"><img src="images/a2.png"></div>
+              <div class="image_12"><img src="images/a3.png"></div>
             </div>
             <div class="footer_images_right">
-              <div class="image_12"><img src="images/"></div>
-              <div class="image_12"><img src="images/"></div>
-              <div class="image_12"><img src="images/"></div>
+              <div class="image_12"><img src="images/b1.png"></div>
+              <div class="image_12"><img src="images/b2.png"></div>
+              <div class="image_12"><img src="images/b3.png"></div>
             </div>
           </div>
         </div>
